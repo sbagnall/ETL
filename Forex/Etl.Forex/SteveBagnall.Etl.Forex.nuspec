@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>SteveBagnall.Etl.Forex</id>
+    <version>$version$</version>
+    <authors>Steve</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>ETL Specific to downloading Forex data and loading into SQLite DB</description>
+    <language>en-GB</language>
+    <dependencies>
+      <dependency id="EntityFramework" version="5.0.0" />
+      <dependency id="MathNet.Numerics" version="2.6.0" />
+      <dependency id="SteveBagnall.Persistence" version="1.0.0.37039" />
+      <dependency id="SteveBagnall.Financial.DataAccess" version="1.0.0.35955" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="*.dll" target="lib" exclude="**\*test*.dll" />
+  </files>
+</package>

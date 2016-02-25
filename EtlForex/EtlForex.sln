@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtlForex", "EtlForex\EtlForex.csproj", "{856975A7-6C44-493C-9A86-B40AA3F64FFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtlForexTests", "EtlForexTests\EtlForexTests.csproj", "{D13B4610-09D3-43FC-9419-0781D1C4E05D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EtlSpecification", "..\EtlSpecification\EtlSpecification\EtlSpecification.csproj", "{09E59672-F5FA-4D65-85B9-11EC18D3A3C1}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://steve-pc:8080/tfs/defaultcollection
+		SccProjectUniqueName0 = ..\\EtlSpecification\\EtlSpecification\\EtlSpecification.csproj
+		SccProjectName0 = ../EtlSpecification/EtlSpecification
+		SccAuxPath0 = http://steve-pc:8080/tfs/defaultcollection
+		SccLocalPath0 = ..\\EtlSpecification\\EtlSpecification
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = EtlForex\\EtlForex.csproj
+		SccProjectName1 = EtlForex
+		SccAuxPath1 = http://steve-pc:8080/tfs/defaultcollection
+		SccLocalPath1 = EtlForex
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = EtlForexTests\\EtlForexTests.csproj
+		SccProjectName2 = EtlForexTests
+		SccAuxPath2 = http://steve-pc:8080/tfs/defaultcollection
+		SccLocalPath2 = EtlForexTests
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{856975A7-6C44-493C-9A86-B40AA3F64FFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{856975A7-6C44-493C-9A86-B40AA3F64FFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{856975A7-6C44-493C-9A86-B40AA3F64FFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{856975A7-6C44-493C-9A86-B40AA3F64FFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D13B4610-09D3-43FC-9419-0781D1C4E05D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D13B4610-09D3-43FC-9419-0781D1C4E05D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D13B4610-09D3-43FC-9419-0781D1C4E05D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D13B4610-09D3-43FC-9419-0781D1C4E05D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09E59672-F5FA-4D65-85B9-11EC18D3A3C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09E59672-F5FA-4D65-85B9-11EC18D3A3C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09E59672-F5FA-4D65-85B9-11EC18D3A3C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09E59672-F5FA-4D65-85B9-11EC18D3A3C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

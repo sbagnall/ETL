@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="NuGetPublish">
+  <PropertyGroup>
+    <ProjectName>SteveBagnall.Etl.Forex</ProjectName>
+    <SolutionName>..\Etl.Forex.sln</SolutionName>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration>Release</Configuration>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NuGetExecutable>$(SourcesSubdirectory)/BuildActivities/NuGet/NuGet.exe</NuGetExecutable>
+    <NuGetRepository>http://localhost:8000/</NuGetRepository>
+  </PropertyGroup>
+  <Target Name="CompileSolution">
+    <MSBuild Projects="$(SolutionName)" Properties="Configuration=$(Configuration)" />
+  </Target>
+  <Target Name="NuGetPublish" DependsOnTargets="CompileSolution">
+    <Error Condition="!Exists('$(OutDir)\$(ProjectName).dll')" Text="The file '$(OutDir)\$(ProjectName).dll' does not exists." />
+    <Error Condition="!Exists('$(OutDir)$(ProjectName).nuspec')" Text="The file '$(OutDir)$(ProjectName).nuspec' does not exists." />
+    <GetAssemblyIdentity AssemblyFiles="$(OutDir)\$(ProjectName).dll">
+      <Output TaskParameter="Assemblies" ItemName="OutputAssemblyInfo" />
+    </GetAssemblyIdentity>
+    <Exec Command="$(NuGetExecutable) pack $(OutDir)$(ProjectName).nuspec -Version %(OutputAssemblyInfo.Version) -OutputDirectory $(OutDir)" ContinueOnError="false" />
+    <Exec Command="$(NuGetExecutable) push $(OutDir)$(ProjectName).%(OutputAssemblyInfo.Version).nupkg -s $(NuGetRepository)" ContinueOnError="false" />
+  </Target>
+</Project>

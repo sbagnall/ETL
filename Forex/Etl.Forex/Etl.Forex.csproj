@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{856975A7-6C44-493C-9A86-B40AA3F64FFE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SteveBagnall.Etl.Forex</RootNamespace>
+    <AssemblyName>SteveBagnall.Etl.Forex</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SteveBagnall.Financial.DataAccess.1.0.0.35955\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SteveBagnall.Financial.DataAccess.1.0.0.35955\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=2.6.0.29, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SteveBagnall.Financial.DataAccess.1.0.0.35955\lib\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics.IO, Version=2.6.0.29, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SteveBagnall.Financial.DataAccess.1.0.0.35955\lib\MathNet.Numerics.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Meta.Numerics, Version=2.1.0.0, Culture=neutral, PublicKeyToken=67d25c65a6631347, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SteveBagnall.Financial.DataAccess.1.0.0.35955\lib\Meta.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Moq, Version=4.0.10827.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SteveBagnall.Etl.Specification.1.0.0.37859\lib\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net">
+      <HintPath>..\packages\SteveBagnall.Persistence.1.0.0.37039\lib\protobuf-net.dll</HintPath>
+    </Reference>
+    <Reference Include="protobuf-net-data">
+      <HintPath>..\packages\SteveBagnall.Persistence.1.0.0.37039\lib\protobuf-net-data.dll</HintPath>
+    </Reference>
+    <Reference Include="SteveBagnall.Core, Version=1.0.0.23161, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SteveBagnall.Financial.DataAccess.1.0.0.35955\lib\SteveBagnall.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="SteveBagnall.Etl.Specification, Version=1.0.0.37859, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SteveBagnall.Etl.Specification.1.0.0.37859\lib\SteveBagnall.Etl.Specification.dll</HintPath>
+    </Reference>
+    <Reference Include="SteveBagnall.Financial.DataAccess, Version=1.0.0.35955, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SteveBagnall.Financial.DataAccess.1.0.0.35955\lib\SteveBagnall.Financial.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="SteveBagnall.Financial.Types, Version=1.0.0.34941, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SteveBagnall.Financial.DataAccess.1.0.0.35955\lib\SteveBagnall.Financial.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="SteveBagnall.Itenso.TimePeriod, Version=1.0.0.22786, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SteveBagnall.Financial.DataAccess.1.0.0.35955\lib\SteveBagnall.Itenso.TimePeriod.dll</HintPath>
+    </Reference>
+    <Reference Include="SteveBagnall.Maths, Version=1.0.0.20891, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SteveBagnall.Financial.DataAccess.1.0.0.35955\lib\SteveBagnall.Maths.dll</HintPath>
+    </Reference>
+    <Reference Include="SteveBagnall.Persistence">
+      <HintPath>..\packages\SteveBagnall.Persistence.1.0.0.37039\lib\SteveBagnall.Persistence.dll</HintPath>
+    </Reference>
+    <Reference Include="SteveBagnall.StringLib, Version=1.0.0.39161, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SteveBagnall.Financial.DataAccess.1.0.0.35955\lib\SteveBagnall.StringLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.SQLite, Version=1.0.85.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <HintPath>..\packages\SteveBagnall.Financial.DataAccess.1.0.0.35955\lib\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.85.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\SteveBagnall.Financial.DataAccess.1.0.0.35955\lib\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extract\DownloadAggregator.cs" />
+    <Compile Include="Extract\DownloadAggregatorResult.cs" />
+    <Compile Include="IDownloadAggregator.cs" />
+    <Compile Include="Transform\TransformerBase.cs" />
+    <Compile Include="IEtlForexConfig.cs" />
+    <Compile Include="IFormatIterator.cs" />
+    <Compile Include="IManifest.cs" />
+    <Compile Include="ISourceSpecification.cs" />
+    <Compile Include="Extract\Downloader.cs" />
+    <Compile Include="Extract\ContinuousFormatIterator.cs" />
+    <Compile Include="Common\Extracter.cs" />
+    <Compile Include="Extract\FileNameExtractionResult.cs" />
+    <Compile Include="Common\Manifest.cs" />
+    <Compile Include="Common\FormatObject.cs" />
+    <Compile Include="IDownloader.cs" />
+    <Compile Include="Common\Loader.cs" />
+    <Compile Include="Common\TransformationResult.cs" />
+    <Compile Include="Common\ParseResult.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Common\Transformer.cs" />
+    <Compile Include="Extract\TryDownloadResult.cs" />
+    <Compile Include="IBinner.cs" />
+    <Compile Include="ICleaner.cs" />
+    <Compile Include="Transform\Binner.cs" />
+    <Compile Include="Transform\Cleaner.cs" />
+    <Compile Include="IFileNameExtractionResult.cs" />
+    <Compile Include="Transform\TransformationData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="SteveBagnall.Etl.Forex.nuspec">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="SteveBagnall.Etl.Forex.proj" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
